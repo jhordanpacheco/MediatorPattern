@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DocumentationFile>bin\Debug\netcoreapp3.1\MediatorPattern.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="MediatR" />
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Domain\" />
+    <None Remove="Domain\Entity\" />
+    <None Remove="Domain\Command\" />
+    <None Remove="Domain\Handler\" />
+    <None Remove="Repository\" />
+    <None Remove="Notifications\" />
+    <None Remove="EventsHandlers\" />
+    <None Remove="Swashbuckle.AspNetCore" />
+    <None Remove="Microsoft.DotNet.PlatformAbstractions" />
+    <None Remove="Microsoft.Extensions.PlatformAbstractions" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\" />
+    <Folder Include="Domain\Entity\" />
+    <Folder Include="Domain\Command\" />
+    <Folder Include="Domain\Handler\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Notifications\" />
+    <Folder Include="EventsHandlers\" />
+  </ItemGroup>
+</Project>
